@@ -69,8 +69,10 @@ if ( get_theme_mod( 'fourteenxt_content_width_adjustment' ) ) {
     $conten_max_width = esc_html( get_theme_mod( 'fourteenxt_content_width_adjustment' ));
 	// Apply site custom settings to appropriate element ?>
     <style>
-	    .site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.site-content .entry-meta,.page-content 
-		{max-width: <?php echo $conten_max_width; ?>px;}.comments-area{max-width: <?php echo $conten_max_width; ?>px;}.post-navigation, .image-navigation{max-width: <?php echo $conten_max_width; ?>px;}</style>
+	    .site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.site-content .entry-meta,.page-content, 
+		.comments-area,.post-navigation,.image-navigation,.page-header,.archive-header
+		{max-width: <?php echo $conten_max_width; ?>px;}
+	</style>
 <?php }
 
 if ( get_theme_mod( 'fourteenxt_fullwidth_blog_feed' ) != 0 ) {
