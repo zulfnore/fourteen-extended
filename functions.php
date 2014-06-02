@@ -286,8 +286,14 @@ add_action( 'init', 'fourteenxt_remove_pre_get_posts', 31 );
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
- 
-if ( get_theme_mod( 'fourteenxt_body_class_filters' ) != 0 ) {
+
+$full_content_home = get_theme_mod( 'fourteenxt_body_class_filters' ) != 0;
+$full_content_search = get_theme_mod( 'fourteenxt_full_content_search' ) != 0;
+$full_content_archive = get_theme_mod( 'fourteenxt_full_content_archive' ) != 0;
+$full_content_category = get_theme_mod( 'fourteenxt_full_content_category' ) != 0;
+
+if ( $full_content_home || $full_content_search 
+     || $full_content_archive || $full_content_category) {
 	function fourteenxt_remove_body_classes() {
 	    remove_filter( 'body_class', 'twentyfourteen_body_classes' );
     }
@@ -303,8 +309,13 @@ if ( get_theme_mod( 'fourteenxt_body_class_filters' ) != 0 ) {
 	} else {
 		$classes[] = 'masthead-fixed';
 	}
-
-	if ( is_archive() || is_search() ) {
+	
+	global $full_content_archive, $full_content_search, $full_content_category, $full_content_home;
+	if ( (is_archive() && !$full_content_archive && !is_category()) 
+	    || (is_search() && !$full_content_search)
+		|| (is_category() && !$full_content_category)
+		|| (is_home() && !$full_content_home)
+	   ) {
 		$classes[] = 'list-view';
 	}
 

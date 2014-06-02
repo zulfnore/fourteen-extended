@@ -488,9 +488,57 @@ function fourteenxt_customize_register( $wp_customize ) {
         'fourteenxt_body_class_filters',
     array(
         'type'     => 'checkbox',
-        'label'    => __('Turn home page List View off? i.e show full content!', 'fourteenxt'),
+        'label'    => __('Show full content on home page?', 'fourteenxt'),
         'section'  => 'fourteenxt_mobile_options',
 		'priority' => 1,
+        )
+    );
+	
+    $wp_customize->add_setting(
+        'fourteenxt_full_content_search', array (
+			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		)
+    );
+
+    $wp_customize->add_control(
+        'fourteenxt_full_content_search',
+    array(
+        'type'     => 'checkbox',
+        'label'    => __('Show full content on search page?', 'fourteenxt'),
+        'section'  => 'fourteenxt_mobile_options',
+		'priority' => 2,
+        )
+    );
+	
+    $wp_customize->add_setting(
+        'fourteenxt_full_content_archive', array (
+			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		)
+    );
+
+    $wp_customize->add_control(
+        'fourteenxt_full_content_archive',
+    array(
+        'type'     => 'checkbox',
+        'label'    => __('Show full content on archive page?', 'fourteenxt'),
+        'section'  => 'fourteenxt_mobile_options',
+		'priority' => 3,
+        )
+    );
+	
+	$wp_customize->add_setting(
+        'fourteenxt_full_content_category', array (
+			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		)
+    );
+
+    $wp_customize->add_control(
+        'fourteenxt_full_content_category',
+    array(
+        'type'     => 'checkbox',
+        'label'    => __('Show full content on category page?', 'fourteenxt'),
+        'section'  => 'fourteenxt_mobile_options',
+		'priority' => 4,
         )
     );
 	
@@ -506,7 +554,7 @@ function fourteenxt_customize_register( $wp_customize ) {
         'fourteenxt_layout_mobile', array(
             'label' => __( 'Featured Content layout for mobile devices', 'fourteenxt'),
             'section' => 'fourteenxt_mobile_options',
-			'priority' => 2,
+			'priority' => 5,
             'settings' => 'fourteenxt_layout_mobile',
             'type' => 'select',
             'choices' => array(
