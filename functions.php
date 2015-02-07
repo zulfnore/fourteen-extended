@@ -38,7 +38,7 @@ if ( ! function_exists( 'fourteenxt_setup' ) ) :
 function fourteenxt_setup() {	
 	// Add support for featured content.
 	$layout = get_theme_mod( 'featured_content_layout' );
-    $max_posts = get_theme_mod( 'num_posts_' . $layout, 2 );
+    $max_posts = get_theme_mod( 'num_posts_' . $layout, 6 );
 	add_theme_support( 'featured-content', array(
 		'featured_content_filter' => 'twentyfourteen_get_featured_posts',
 		'max_posts' => $max_posts,
@@ -62,7 +62,7 @@ if ( $fourteenxt_options ) {
 
 // At this point in the filter we are recalling the layout and content count.
 $layout = get_theme_mod( 'featured_content_layout' );
-$max_posts = get_theme_mod( 'num_posts_' . $layout, 2 );
+$max_posts = get_theme_mod( 'num_posts_' . $layout, 6 );
 $orderby = get_theme_mod( 'fourteenxt_featured_orderby' );
 $order = get_theme_mod( 'fourteenxt_featured_order' );
 // Here we determine what content type we are going to feature - Posts, Pages or a Custom Post Type.
