@@ -87,6 +87,13 @@ You can use Fourteen Extended with both the default Twenty Fourteen and its chil
 
 == Changelog ==
 
+= 1.2.33 =
+* Updated to the latest version Custom Meta Boxes (CMB2)
+
+= 1.2.32 =
+* Fixed sanitization and user capability check for the customizer.
+* Fixed bug on excerpts when video is not present.
+
 = 1.2.31 =
 * Reworked the Featured Order by options to fix the bug encountered in the initial addition.
 
