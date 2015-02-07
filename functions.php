@@ -147,24 +147,8 @@ function fourteenxt_excerpts($content = false) {
 				array_pop($words);
 				array_push($words, $more);
 				$content = implode(' ', $words);
-			endif;
+			endif;			
 			
-			// If post format is video use first video as excerpt
-            $postcustom = get_post_custom_keys();
-            if ($postcustom){
-                $i = 1;
-                foreach ($postcustom as $key){
-                    if (strpos($key,'oembed')){
-                        foreach (get_post_custom_values($key) as $video){
-                            if ($i == 1){
-                            $content = $video;
-                            }
-                            $i++;
-                        }
-                    }  
-                }
-            }
-			$content = $content;
 		endif;
 	endif;
 
