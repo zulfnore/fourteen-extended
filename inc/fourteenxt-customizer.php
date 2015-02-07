@@ -48,6 +48,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_disable_style_output', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -65,6 +66,7 @@ function fourteenxt_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fourteenxt_center_site', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -81,6 +83,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_featured_remove', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -98,7 +101,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_maximum_site_width',
     array(
         'default' => '1260',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -113,7 +117,8 @@ function fourteenxt_customize_register( $wp_customize ) {
 	// Primary position switch - float it to the left.
 	$wp_customize->add_setting( 'fourteenxt_primary_menu_float', array(
 		'default' => 'right',
-		'sanitize_callback' => 'fourteenxt_sanitize_menu_float'
+		'sanitize_callback' => 'fourteenxt_sanitize_menu_float',
+		'capability' => 'edit_theme_options',
 	) );
 	
 	$wp_customize->add_control( 'fourteenxt_primary_menu_float', array(
@@ -131,6 +136,7 @@ function fourteenxt_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fourteenxt_hide_left_sidebar', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -147,6 +153,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_primary_sidebar_right', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -164,7 +171,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_overall_content_width',
     array(
         'default' => '1038',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -180,7 +188,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_overall_image_height',
     array(
         'default' => '572',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -195,6 +204,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_enable_image_width', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -211,6 +221,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_remove_image_bg', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -228,6 +239,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_fullwidth_blog_feed', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -245,6 +257,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_fullwidth_single_post', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -262,6 +275,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_fullwidth_archives', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -279,6 +293,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_fullwidth_searches', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -295,6 +310,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_content_top_padding', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -312,7 +328,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_no_featured_image_offset',
     array(
         'default' => '28',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -327,6 +344,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_home_content_separator', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -344,7 +362,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_content_separator_op',
     array(
         'default' => '0.1',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -360,7 +379,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_content_off_featured_image',
     array(
         'default' => '',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -376,7 +396,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_content_width_adjustment',
     array(
         'default' => '474',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -388,20 +409,10 @@ function fourteenxt_customize_register( $wp_customize ) {
         'type' => 'text',
     ));
 	
-	// Blog Feed Category Selector
-    $categories = get_categories();
-	$cats = array( 'All Categories' );
-	$i = 0;
-	foreach($categories as $category){
-		if($i==0){
-			$default = $category->slug;
-			$i++;
-		}
-		$cats[$category->slug] = $category->name;
-	}
- 
+	// Blog Feed Category Selector	
 	$wp_customize->add_setting('fourteenxt_feed_cat', array(
-		'default'  => '',
+		'default'           => 'All Categories',
+		'sanitize_callback' => 'fourteenxt_sanitize_feed_categories',
 	));
 	$wp_customize->add_control( 'fourteenxt_feed_cat', array(
 		'settings' => 'fourteenxt_feed_cat',
@@ -409,12 +420,14 @@ function fourteenxt_customize_register( $wp_customize ) {
 		'section'  => 'fourteenxt_content_options',
 		'priority' => 11,
 		'type'    => 'select',
-		'choices' => $cats,
+		'choices' => fourteenxt_feed_categories_choices(),
 	));
 	
 	$wp_customize->add_setting(
-        'fourteenxt_feed_excerpts'
-    );
+        'fourteenxt_feed_excerpts', array (
+			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
+    ));
 
     $wp_customize->add_control(
         'fourteenxt_feed_excerpts',
@@ -430,7 +443,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_excerpt_length',
     array(
         'default' => 55,
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -447,6 +461,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_featured_visibility', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -464,6 +479,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_sidebar_top_border', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -481,6 +497,7 @@ function fourteenxt_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fourteenxt_body_class_filters', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -497,6 +514,7 @@ function fourteenxt_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fourteenxt_full_content_search', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -513,6 +531,7 @@ function fourteenxt_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fourteenxt_full_content_archive', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -529,6 +548,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_full_content_category', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -546,7 +566,8 @@ function fourteenxt_customize_register( $wp_customize ) {
 	    'fourteenxt_layout_mobile', 
 	    array( 
 	        'default' => 'grid',
-            'sanitize_callback' => 'fourteenxt_sanitize_mobile_layout',			
+            'sanitize_callback' => 'fourteenxt_sanitize_mobile_layout',
+		    'capability' => 'edit_theme_options',			
 	    )
 	);
 
@@ -569,6 +590,7 @@ function fourteenxt_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fourteenxt_fitvids_enable', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -586,7 +608,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_fitvids_selector',
     array(
         'default' => '.post',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -602,7 +625,8 @@ function fourteenxt_customize_register( $wp_customize ) {
     'fourteenxt_fitvids_custom_selector',
     array(
         'default' => '',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability' => 'edit_theme_options',
     ));
 	
 	$wp_customize->add_control(
@@ -634,6 +658,7 @@ function fourteenxt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
         'fourteenxt_load_respond', array (
 			'sanitize_callback' => 'fourteenxt_sanitize_checkbox',
+		    'capability' => 'edit_theme_options',
 		)
     );
 
@@ -649,31 +674,25 @@ function fourteenxt_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'fourteenxt_customize_register' );
 
-if ( version_compare( $GLOBALS['wp_version'], '3.9', '<' ) ) {
-// For Test purposes only & add support for wp_is_mobile workaround - not required for WP 3.9
-if ( ! function_exists( 'wp_is_mobile' ) ) :
-function wp_is_mobile() {
-	static $is_mobile;
-
-	if ( isset($is_mobile) )
-		return $is_mobile;
-
-	if ( empty($_SERVER['HTTP_USER_AGENT']) ) {
-		$is_mobile = false;
-	} elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false // many mobile devices (all iPhone, iPad, etc.)
-		|| strpos($_SERVER['HTTP_USER_AGENT'], 'Android') !== false
-		|| strpos($_SERVER['HTTP_USER_AGENT'], 'Silk/') !== false
-		|| strpos($_SERVER['HTTP_USER_AGENT'], 'Kindle') !== false
-		|| strpos($_SERVER['HTTP_USER_AGENT'], 'BlackBerry') !== false
-		|| strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mini') !== false
-		|| strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mobi') !== false ) {
-			$is_mobile = true;
-	} else {
-		$is_mobile = false;
+function fourteenxt_feed_categories_choices() {
+    $categories = get_categories();
+	$cats = array( 'All Categories' );
+	$i = 0;
+	foreach($categories as $category){
+		if($i==0){
+			$default = $category->slug;
+			$i++;
+		}
+	$cats[$category->slug] = $category->name;
 	}
-	return $is_mobile;
+	return $cats;
 }
-endif;
+
+function fourteenxt_sanitize_feed_categories($cats) {
+    if ( ! in_array( $cats, array() ) ) {
+		$choices = $cats;
+	}
+	return $choices;
 }
 
 function fourteenxt_mobile_layout( $value ) {
