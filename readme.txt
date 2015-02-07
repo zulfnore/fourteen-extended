@@ -2,8 +2,8 @@
 Contributors: Zulfikar Nore
 Tags: Twenty Fourteen, Custom Options, Custom, Options, Theme Customizer, Twenty Fourteen Theme, Default Theme, 2014, Center Site, Full Width Post Feed, Full Width Single Posts, FitVids
 Requires at least: 3.6
-Tested up to: 3.9.1
-Stable tag: 1.2.31
+Tested up to: 4.1
+Stable tag: 1.2.33
 Description: Customize the layout of the Twenty Fourteen Theme, directly within the Theme Customizer.
 License: GPLv2
 
@@ -84,6 +84,13 @@ Fourteen Extended is a plugin, not a child theme, because it is primarily progra
 You can use Fourteen Extended with both the default Twenty Fourteen and its child themes. Be aware that the Fourteen Extended settings are stored with the active theme, so if you switch to a child theme or switch child themes, you'll need to re-set the configurations. Child theme compatibility depends on the extent of changes made by the child theme.
 
 == Changelog ==
+
+= 1.2.33 =
+* Updated to the latest version Custom Meta Boxes (CMB2)
+
+= 1.2.32 =
+* Fixed sanitization and user capability check for the customizer.
+* Fixed bug on excerpts when video is not present.
 
 = 1.2.31 =
 * Reworked the Featured Order by options to fix the bug encountered in the initial addition.
